@@ -1,0 +1,138 @@
+/* v1 scaffolding: plain grayscale, one system font. Disposable —
+   Phase 7 replaces every token wholesale, not just the accent. */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-muted: #4d4d4d;
+  --color-border: #d9d9d9;
+  --color-link: #000000;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --measure: 68ch;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+  --fs-base: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --fs-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-text: #f2f2f2;
+    --color-muted: #b3b3b3;
+    --color-border: #333333;
+    --color-link: #f2f2f2;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-4) var(--space-2);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 var(--space-2);
+}
+
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); margin-top: var(--space-5); }
+h3 { font-size: var(--fs-lg); margin-top: var(--space-3); }
+
+p, ul, ol {
+  margin: 0 0 var(--space-2);
+}
+
+ul, ol {
+  padding-left: 1.25em;
+}
+
+li + li {
+  margin-top: 0.35em;
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.15em;
+}
+
+a:not(:hover) {
+  text-decoration-thickness: 1px;
+}
+
+section + section {
+  margin-top: var(--space-5);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  main {
+    padding-block: var(--space-5);
+  }
+}
+
+@media print {
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

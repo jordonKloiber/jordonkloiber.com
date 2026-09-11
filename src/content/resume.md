@@ -68,6 +68,7 @@ SumoLogic, Snowflake, Snyk
 Pittsburgh, Pennsylvania
 
 **Senior Software Quality Engineer**, 2023-2026
+
 **Software Quality Assurance Analyst**, 2020-2023
 
 - Used AI coding tools (Claude Code, Claude Skills, GitHub Copilot) as a force

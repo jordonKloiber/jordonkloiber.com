@@ -1,0 +1,28 @@
+---
+import SEO, { type SEOProps } from '../components/SEO.astro';
+import '../styles/global.css';
+
+interface Props extends SEOProps {
+  jsonLd?: Record<string, unknown>;
+}
+
+const { title, description, ogType, ogImage, jsonLd } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO title={title} description={description} ogType={ogType} ogImage={ogImage} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

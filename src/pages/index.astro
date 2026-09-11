@@ -1,17 +1,109 @@
 ---
+import Base from '../layouts/Base.astro';
 
+const githubUrl = 'https://github.com/jordonKloiber';
+const linkedinUrl = 'https://www.linkedin.com/in/jordon-kloiber';
+
+const title = 'Jordon Kloiber | Senior QA Engineer / SDET';
+const description =
+  'Jordon Kloiber is a Senior QA Engineer and SDET in Pittsburgh, PA, focused on test automation and quality strategy for web, iOS, and Android products.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://jordonkloiber.com/#person',
+  name: 'Jordon Kloiber',
+  url: 'https://jordonkloiber.com',
+  image: 'https://jordonkloiber.com/headshot.jpg',
+  jobTitle: 'Senior QA Engineer / SDET',
+  description: 'Senior QA Engineer and SDET in Pittsburgh, Pennsylvania.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Pittsburgh',
+    addressRegion: 'PA',
+    addressCountry: 'US',
+  },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Pittsburgh' },
+  knowsAbout: [
+    'Test Automation',
+    'Playwright',
+    'API Testing',
+    'Web Accessibility',
+    'WCAG',
+    'CI/CD',
+    'A/B Testing',
+    'TypeScript',
+  ],
+  sameAs: [linkedinUrl, githubUrl],
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title={title} description={description} ogType="profile" jsonLd={jsonLd}>
+  <nav>
+    <a href="/resume">Resume</a>
+    &nbsp;&nbsp;
+    <a href="/work/">Work</a>
+    &nbsp;&nbsp;
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="hero">
+    <h1>Jordon Kloiber</h1>
+    <p>Senior QA Engineer / SDET based in Pittsburgh, PA.</p>
+    <p>Currently open to new opportunities.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm a Senior QA Engineer and SDET with 5+ years building test
+      automation and quality strategy from the ground up, most recently
+      owning quality end-to-end for a high-traffic registration product:
+      test strategy, CI/CD health, and full-stack automation across web,
+      iOS, and Android.
+    </p>
+    <p>
+      I use AI coding tools like Claude Code and GitHub Copilot as a force
+      multiplier, not a shortcut, and favor a risk-based, shift-left
+      approach: catching problems in a design review or a pull request
+      before they reach users. Coverage numbers matter less to me than
+      real-world impact and accessibility.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Core competencies</h2>
+    <ul>
+      <li>Test Strategy Development and Implementation</li>
+      <li>Shift-Left Quality</li>
+      <li>iOS / Android Test Automation</li>
+      <li>API Contract and Schema Testing</li>
+      <li>Quality Metrics Analysis and Reporting</li>
+      <li>LLM / AI Feature Testing</li>
+    </ul>
+    <p><a href="/resume">Read the full resume</a></p>
+  </section>
+
+  <section id="work">
+    <h2>Work</h2>
+    <p>
+      Case studies are in progress. In the meantime, see the{' '}
+      <a href="/resume">resume</a> for a full history.
+    </p>
+  </section>
+
+  <section id="links">
+    <h2>Links</h2>
+    <ul>
+      <li><a href={linkedinUrl}>LinkedIn</a></li>
+      <li><a href={githubUrl}>GitHub</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:jordonk267+site@gmail.com">jordonk267+site@gmail.com</a>
+    </p>
+  </section>
+</Base>

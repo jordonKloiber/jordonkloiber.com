@@ -1,0 +1,31 @@
+---
+export interface SEOProps {
+  title: string;
+  description: string;
+  ogType?: 'website' | 'profile' | 'article';
+  ogImage?: string;
+}
+
+type Props = SEOProps;
+
+const { title, description, ogType = 'website', ogImage = '/og-image.png' } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content="Jordon Kloiber" />
+<meta property="og:image" content={ogImageURL} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageURL} />
