@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
 import { Content } from '../content/resume.md';
+
+const githubUrl = 'https://github.com/jordonKloiber';
+const linkedinUrl = 'https://www.linkedin.com/in/jordon-kloiber';
 ---
 
 <Base
@@ -9,8 +13,26 @@ import { Content } from '../content/resume.md';
 >
   <h1>Jordon Kloiber</h1>
   <p class="no-print">
-    <a href="/">&larr; Back to home</a> &nbsp;&nbsp;
+    <a href="/">&lt; Back to home</a> &nbsp;&nbsp;
     <a href="/jordon-kloiber-resume.pdf" download>Download PDF</a>
   </p>
+
   <Content />
+
+  <section class="section">
+    <h2>Contact</h2>
+    <ul class="rows">
+      <li>
+        <a href="mailto:jordonk267+site@gmail.com">
+          <Icon name="email" />jordonk267+site@gmail.com
+        </a>
+      </li>
+      <li>
+        <a href={githubUrl}><Icon name="github" />github.com/jordonKloiber</a>
+      </li>
+      <li>
+        <a href={linkedinUrl}><Icon name="linkedin" />linkedin.com/in/jordon-kloiber</a>
+      </li>
+    </ul>
+  </section>
 </Base>

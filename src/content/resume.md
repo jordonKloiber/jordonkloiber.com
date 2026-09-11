@@ -1,9 +1,5 @@
 Pittsburgh, Pennsylvania
 
-[jordonk267+site@gmail.com](mailto:jordonk267+site@gmail.com)
-
-[linkedin.com/in/jordon-kloiber](https://www.linkedin.com/in/jordon-kloiber)
-
 ## Summary
 
 QA Engineer and Senior Software Quality Engineer with 5+ years building
@@ -83,7 +79,7 @@ Pittsburgh, Pennsylvania
   automated full-stack testing (Playwright and API Proctor, an in-house API
   test framework), API contract and schema validation, CI / CD pipeline
   maintenance, and performance / load testing.
-- Wrote over 300 Playwright tests, building coverage from scratch for 6+
+- Wrote hundreds of Playwright tests, building coverage from scratch for 6+
   registration features with fixtures and page object models, plus visual
   regression for critical flows.
 - Used Storybook regularly for component-level QA, authoring stories and
