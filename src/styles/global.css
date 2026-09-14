@@ -40,7 +40,7 @@
 
   --gap-section: 4.5rem;
   --gap-para: 1.1rem;
-  --gap-row: 0.45rem;
+  --gap-row: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -155,7 +155,7 @@ img {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  margin: 0 auto 1.9rem;
+  margin: 0 0 1.9rem;
 }
 
 .name {
@@ -215,6 +215,24 @@ img {
 
 .row-desc {
   color: var(--muted);
+}
+
+/* Touch target: rows that are actual navigation (a link per line,
+   not prose) grow to ~44px tall via padding, cancelled by matching
+   negative margin so the visible text position doesn't move and
+   surrounding rows don't get pushed apart. The padding still paints
+   and is still tappable — only its layout contribution is cancelled. */
+.rows li > a {
+  display: inline-block;
+  padding: 0.75rem 0;
+  margin: -0.75rem 0;
+}
+
+/* Standalone nav links (back-links, PDF download) — same treatment. */
+.nav-link {
+  display: inline-block;
+  padding: 0.75rem 0.15rem;
+  margin: -0.75rem -0.15rem;
 }
 
 /* Inline icon: sits before the link text, never instead of it. */

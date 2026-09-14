@@ -11,7 +11,7 @@ const entries = (await getCollection('work', ({ data }) => !data.draft)).sort(
   title="Jordon Kloiber | Work"
   description="Case studies from Jordon Kloiber, a Senior QA Engineer and SDET in Pittsburgh, PA, covering test strategy, automation, and quality engineering work in detail."
 >
-  <p class="no-print"><a href="/">&lt; Back to home</a></p>
+  <p class="no-print"><a class="nav-link" href="/">&lt; Back to home</a></p>
   <h1>Work</h1>
   {
     entries.length === 0 ? (

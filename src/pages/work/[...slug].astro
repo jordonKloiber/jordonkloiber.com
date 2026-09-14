@@ -19,7 +19,7 @@ const { Content } = await render(entry);
   description={entry.data.summary}
   ogType="article"
 >
-  <p class="no-print"><a href="/work/">&lt; All work</a></p>
+  <p class="no-print"><a class="nav-link" href="/work/">&lt; All work</a></p>
   <h1>{entry.data.title}</h1>
   <p>{entry.data.role}</p>
   <Content />
