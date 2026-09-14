@@ -1,6 +1,8 @@
 ---
+import { Picture } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
+import headshot from '../assets/headshot.jpg';
 
 const githubUrl = 'https://github.com/jordonKloiber';
 const linkedinUrl = 'https://www.linkedin.com/in/jordon-kloiber';
@@ -57,12 +59,16 @@ const jsonLd = {
 ---
 
 <Base title={title} description={description} ogType="profile" jsonLd={jsonLd}>
-  <img
+  <Picture
     class="avatar"
-    src="/headshot.jpg"
-    width="88"
-    height="88"
+    src={headshot}
+    formats={['avif', 'webp']}
+    widths={[88, 176]}
+    sizes="88px"
+    width={88}
+    height={88}
     alt="Jordon Kloiber"
+    loading="eager"
     fetchpriority="high"
   />
 
