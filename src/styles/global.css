@@ -23,7 +23,7 @@
    the name is the only thing raising its voice. */
 
 :root {
-  --ground: #ffffff;
+  --ground: #faf7f0;
   --ink: #1b1e20;
   --muted: #5f6469;
   --border: #e5e7e4;
@@ -47,7 +47,7 @@
   :root {
     --ground: #14171a;
     --ink: #ecedeb;
-    --muted: #9aa0a5;
+    --muted: #9fa5aa;
     --border: #2a2d30;
   }
 }
