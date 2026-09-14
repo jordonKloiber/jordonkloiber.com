@@ -28,7 +28,9 @@ const { title, description, ogType, ogImage, jsonLd } = Astro.props;
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <main id="main">
+    <!-- tabindex="-1": <main> isn't natively focusable, so without this the
+         skip link scrolls here but never moves keyboard/AT focus. -->
+    <main id="main" tabindex="-1">
       <slot />
     </main>
   </body>
