@@ -37,16 +37,16 @@ TypeScript, JavaScript, Python, Java, SQL, Go
 
 ### Test frameworks
 Playwright, Jest, PyTest, Storybook, API Proctor (in-house API test
-framework), Postman, Swagger, Nightwatch
+framework), Postman, Swagger, Nightwatch, axe-core
 
 ### Frontend
-React.js
+React.js, Astro
 
 ### Mobile testing
 Appium, Maestro, iOS, Android, BrowserStack
 
 ### CI/CD & infrastructure
-GitHub Actions, Docker, Git, GitHub, Kubernetes
+GitHub Actions, Docker, Git, GitHub, GitHub Pages, Kubernetes
 
 ### Databases & data tools
 PostgreSQL, MySQL, Redis, DBeaver, AWS (RDS)
