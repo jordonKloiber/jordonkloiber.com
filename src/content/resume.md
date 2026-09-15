@@ -123,6 +123,14 @@ Saint Paul, Minnesota
 QA Intern, 2016. Tested features on mobile and tablet apps. Identified and
 reported bugs. Tested and researched VR technology.
 
+### jordonkloiber.com
+Personal project, 2026
+
+Designed and built a personal portfolio site from scratch with Astro,
+including an automated accessibility test suite (Playwright + axe-core) that
+runs in CI on every pull request and gates deploys, shipped via GitHub
+Actions to GitHub Pages.
+
 ## Education
 
 ### University of Pittsburgh
