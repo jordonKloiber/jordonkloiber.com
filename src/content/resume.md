@@ -105,9 +105,8 @@ Pittsburgh, Pennsylvania
   and reviewing components in isolation, with visual regression checks to
   catch UI drift before merge.
 - Mentored QA peer with zero automation experience into team's sole engineer
-  capable of writing automated tests in 6 months. Worked cross-functionally
-  to provide coaching and code reviews to QA engineers on writing and
-  maintaining automated tests.
+  capable of writing automated tests in 6 months. Provided coaching and code
+  reviews to fellow QA engineers on writing and maintaining automated tests.
 - Designed and ensured quality on 5 A/B experiments, including building custom
   AB Tasty widgets from scratch in JavaScript.
 - Conducted accessibility / WCAG testing (ARIA attributes, color contrast,
