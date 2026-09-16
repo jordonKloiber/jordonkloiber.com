@@ -247,13 +247,23 @@ img {
 }
 
 /* Standalone icon link (resume chrome). No visible text, so the
-   accessible name comes from aria-label on the anchor — without it
+   accessible name comes from aria-label on the anchor, without it
    this would be an unlabelled link and a WCAG 2.4.4 failure. */
 .icon-link {
   display: inline-block;
   padding: 0.35rem;
   vertical-align: middle;
   text-decoration: none;
+}
+
+/* .rows li > a normally wins this fight on specificity and overrides
+   .icon-link's padding outright, so an icon-only link inside a .rows
+   <li> (the homepage testimonials) needs this to get .icon-link's full
+   padding instead of .rows's vertical-only padding, to clear the
+   WCAG 2.5.8 24px target floor. */
+.rows li > a.icon-link {
+  padding: 0.35rem;
+  margin: -0.35rem;
 }
 
 .icon-link .icon {
