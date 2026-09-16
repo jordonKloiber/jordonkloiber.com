@@ -35,6 +35,10 @@ mentoring peers to grow team-wide automation capability.
 ### Methodologies
 Agile, Scrum, Shift-Left Testing, Risk-Based Testing, Continuous Testing
 
+### Accessibility
+WCAG 2.2 AA, ARIA, NVDA, VoiceOver, AXE DevTools, Screen Reader Testing,
+Keyboard-Only Navigation
+
 ### Test frameworks
 Playwright, Nightwatch (Selenium WebDriver), Cucumber (Gherkin), Jest,
 PyTest, Storybook, API Proctor (in-house API test framework), Postman,
@@ -47,7 +51,8 @@ REST API, Postman, Swagger, API Proctor (in-house API test framework)
 React.js, Astro
 
 ### CI/CD & infrastructure
-GitHub Actions, Docker, Git, GitHub, GitHub Pages, Kubernetes
+GitHub Actions, Docker, Git, GitHub, GitHub Pages, Kubernetes, Redis,
+AWS (RDS)
 
 ### Mobile testing
 Appium, Maestro, iOS, Android, BrowserStack
@@ -68,8 +73,8 @@ PostgreSQL, MySQL, Redis, DBeaver, AWS (RDS)
 Claude Code, Claude Skills, GitHub Copilot
 
 ### Debugging & bug tracking
-Browser DevTools, Network Profiling, Jira, Confluence, Google Analytics,
-SumoLogic, Snowflake
+Browser DevTools, Network Profiling, Jira, Confluence, BrowserStack, Google
+Analytics, SumoLogic, Snowflake
 
 ## Experience
 
