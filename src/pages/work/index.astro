@@ -23,7 +23,9 @@ const entries = (await getCollection('work', ({ data }) => !data.draft)).sort(
       <ul>
         {entries.map((entry) => (
           <li>
-            <a href={`/work/${entry.id}/`}>{entry.data.title}</a>
+            <a href={`/work/${entry.id}/`}>
+              <strong>{entry.data.title}</strong>
+            </a>
             <p>{entry.data.summary}</p>
           </li>
         ))}

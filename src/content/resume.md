@@ -32,23 +32,22 @@ mentoring peers to grow team-wide automation capability.
 
 ## Technical skills
 
+### Languages
+TypeScript, JavaScript, Python, Java, SQL, Go
+
 ### Methodologies
 Agile, Scrum, Shift-Left Testing, Risk-Based Testing, Continuous Testing
-
-### Accessibility
-WCAG 2.2 AA, ARIA, NVDA, VoiceOver, AXE DevTools, Screen Reader Testing,
-Keyboard-Only Navigation
 
 ### Test frameworks
 Playwright, Nightwatch (Selenium WebDriver), Cucumber (Gherkin), Jest,
 PyTest, Storybook, API Proctor (in-house API test framework), Postman,
 Swagger, axe-core
 
-### API testing
-REST API, Postman, Swagger, API Proctor (in-house API test framework)
-
 ### Frontend
 React.js, Astro
+
+### API testing
+REST API, Postman, Swagger, API Proctor (in-house API test framework)
 
 ### CI/CD & infrastructure
 GitHub Actions, Docker, Git, GitHub, GitHub Pages, Kubernetes, Redis,
@@ -63,8 +62,9 @@ k6
 ### Security testing
 OWASP Top 10, Snyk
 
-### Languages
-TypeScript, JavaScript, Python, Java, SQL, Go
+### Accessibility
+WCAG 2.2 AA, ARIA, NVDA, VoiceOver, AXE DevTools, Screen Reader Testing,
+Keyboard-Only Navigation
 
 ### Databases & data tools
 PostgreSQL, MySQL, Redis, DBeaver, AWS (RDS)

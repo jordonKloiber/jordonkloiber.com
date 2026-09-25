@@ -11,20 +11,27 @@ const title = 'Jordon Kloiber | Senior QA Engineer / SDET';
 const description =
   'Jordon Kloiber is a Senior QA Engineer and SDET in Pittsburgh, PA, focused on test automation and quality strategy for web, iOS, and Android products.';
 
-// Verbatim from the Technical skills section of the resume.
+// Mirrors the Technical skills section of the resume.
 const tools = [
   ['Languages & frameworks', 'TypeScript, JavaScript, Python, Java, SQL, Go, React.js, Astro'],
   [
-    'Test frameworks',
-    'Playwright, Jest, PyTest, Storybook, API Proctor (in-house API test framework), Postman, Swagger, Nightwatch, axe-core',
+    'Methodologies',
+    'Agile, Scrum, Shift-Left Testing, Risk-Based Testing, Continuous Testing',
   ],
-  ['Mobile testing', 'Appium, Maestro, iOS, Android, BrowserStack'],
+  [
+    'Test frameworks',
+    'Playwright, Nightwatch, Cucumber (Gherkin), Jest, PyTest, Storybook, API Proctor (in-house API test framework), Postman, Swagger, axe-core',
+  ],
+  ['API testing', 'REST API, Postman, Swagger, API Proctor (in-house API test framework)'],
   ['CI/CD & infrastructure', 'GitHub Actions, Docker, Git, GitHub, GitHub Pages, Kubernetes'],
+  ['Mobile testing', 'Appium, Maestro, iOS, Android, BrowserStack'],
+  ['Performance testing', 'k6'],
+  ['Security testing', 'OWASP Top 10, Snyk'],
   ['Databases & data tools', 'PostgreSQL, MySQL, Redis, DBeaver, AWS (RDS)'],
   ['AI tools', 'Claude Code, Claude Skills, GitHub Copilot'],
   [
     'Debugging & bug tracking',
-    'Browser DevTools, Network Profiling, Jira, Confluence, Google Analytics, SumoLogic, Snowflake, Snyk',
+    'Browser DevTools, Network Profiling, Jira, Confluence, Google Analytics, SumoLogic, Snowflake',
   ],
 ];
 
@@ -79,13 +86,14 @@ const jsonLd = {
 
   <section class="section">
     <h2>About</h2>
+    <p>Hi I'm Jordon,</p>
     <p>
       I have always been interested in software, but I fell into QA during
       my summer internship in 2016. QA work was the majority of what
       they needed from me, so I jumped in. It didn't take long to realize I
       thoroughly enjoyed the puzzle of it. Finding the one thing everyone
       missed, whether by hand or by writing the automation that catches it,
-      is always thrilling.
+      is always rewarding.
     </p>
     <p>
       What draws me in is working across the whole stack. I like
@@ -95,7 +103,7 @@ const jsonLd = {
       not be boxed into one layer. Right now that means learning test
       strategy for AI features and emerging new structures like
       microfrontends and module federation. I use tools like Claude Code and
-      agents to move faster, but I still want to think through the problem
+      agents to move faster, but I think through each problem
       myself, so I'd rather catch something in a design review or a PR than
       chase a coverage number later.
     </p>
@@ -161,8 +169,7 @@ const jsonLd = {
     <h2>Work</h2>
     <ul class="rows">
       <li>
-        <a href="/work/"><span class="row-label">Case studies</span></a>{' '}
-        <span class="row-desc">(In progress)</span>
+        <a href="/work/"><span class="row-label">Case studies</span></a>
       </li>
       <li>
         <a href="/resume"><span class="row-label">Resume</span></a>{' '}
