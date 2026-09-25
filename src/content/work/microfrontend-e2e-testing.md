@@ -1,5 +1,5 @@
 ---
-title: "Reaching for the Playwright Pie in the Sky"
+title: "The Playwright Pie in the Sky: Solving for CI Blindspots in Microfrontend Architecture in a Crunch"
 summary: "When a new microfrontend architecture created a blind spot in our end-to-end test coverage, I built a cost/risk model to compare three ways to close it, then picked the one that actually fit the team's real constraints."
 role: "Senior Software Quality Engineer"
 date: 2026-09-25
