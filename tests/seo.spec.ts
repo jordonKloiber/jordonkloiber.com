@@ -14,6 +14,13 @@ const canonicalPaths: Record<string, string> = {
 // Pages that rank for the name rather than a topic.
 const identityRoutes = ['/', '/resume'];
 
+// Case studies are matched by pattern so new ones need no edit here.
+function expectedOgType(route: string) {
+  if (route === '/') return 'profile';
+  if (/^\/work\/.+/.test(route)) return 'article';
+  return 'website';
+}
+
 for (const route of routes) {
   test(`${route} has exactly one h1 and "Jordon Kloiber" in the title`, async ({ page }) => {
     await page.goto(route);
@@ -37,6 +44,15 @@ for (const route of routes) {
     if (identityRoutes.includes(route)) {
       expect(description).toContain('Jordon Kloiber');
     }
+  });
+
+  test(`${route} declares og:type "${expectedOgType(route)}"`, async ({ page }) => {
+    await page.goto(route);
+
+    await expect(page.locator('meta[property="og:type"]')).toHaveAttribute(
+      'content',
+      expectedOgType(route)
+    );
   });
 
   test(`${route} canonical is absolute and self-referencing`, async ({ page }) => {
