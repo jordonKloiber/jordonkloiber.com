@@ -11,7 +11,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:links": "EXTERNAL_LINKS=1 playwright test"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

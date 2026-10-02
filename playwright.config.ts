@@ -1,11 +1,17 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// @external tests hit third-party sites, so they stay out of the default
+// run and only run under `npm run test:links`.
+const external = !!process.env.EXTERNAL_LINKS;
+
 // Tests always run against a real production build (`astro build` +
 // `astro preview`), never `astro dev` — dev-mode HMR/overlay behavior
 // isn't what ships, and console-error assertions need to see exactly
 // what a visitor gets.
 export default defineConfig({
   testDir: './tests',
+  grep: external ? /@external/ : undefined,
+  grepInvert: external ? undefined : /@external/,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
