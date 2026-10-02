@@ -1,9 +1,5 @@
 import { test, expect } from '@playwright/test';
-
-// The site's real routes. /work/draft-case-study/ is deliberately excluded —
-// it carries draft: true and is filtered out of getStaticPaths, so it isn't
-// a route at all right now.
-const routes = ['/', '/resume', '/work/'];
+import { routes } from './routes';
 
 for (const route of routes) {
   test(`${route} returns 200 with no console errors`, async ({ page }) => {

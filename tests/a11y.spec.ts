@@ -1,7 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { test, expect } from '@playwright/test';
-
-const routes = ['/', '/resume', '/work/'];
+import { routes } from './routes';
 
 // Relative luminance / contrast math. WCAG 1.4.11 (non-text contrast)
 // needs 3:1, not the 4.5:1 / 7:1 text thresholds, so this is separate
