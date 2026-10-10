@@ -2,21 +2,21 @@ Pittsburgh, Pennsylvania
 
 ## Summary
 
-QA Automation Engineer with 5+ years designing and scaling automated testing
-frameworks across web, API, and mobile platforms in Agile / Scrum
-environments. Owns QA infrastructure end-to-end, from test strategy and
-CI/CD pipeline health to API, performance, and regression testing, with a
-risk-based, shift-left approach that embeds testing early through Figma spec
-review, sprint planning, and PR cycles. A disciplined problem-solver who
-thrives in ambiguous environments, using AI-augmented workflows (Claude Code,
-GitHub Copilot) as force multipliers to ship quality at speed without growing
-headcount.
+Senior Quality Engineer with 6+ years building automated testing foundations
+from the ground up. Energized by lean, AI-augmented teams: uses Claude
+Code, GitHub Copilot, and agentic workflows as force multipliers to ship
+quality at speed across high-traffic consumer web, iOS, and Android without
+growing headcount. Owns QA infrastructure end-to-end, from test strategy and
+CI/CD pipeline health to API, performance, regression, and accessibility
+testing, with a risk-based approach to coverage. Champions shift-left
+quality practices, embedding testing early through Figma spec review, sprint
+planning, and PR cycles to catch defects before development begins.
 
 Brings an innovative, user-first mindset, grounding quality decisions in
 real-world user impact rather than coverage metrics alone. A reliable remote
 collaborator with clear async communication, producing bug reports, test
-plans, and QA documentation for distributed, remote-first teams, and
-mentoring peers to grow team-wide automation capability.
+plans, and QA documentation for distributed, remote-first teams, and works
+effectively amid uncertainty.
 
 ## Core competencies
 
@@ -29,6 +29,7 @@ mentoring peers to grow team-wide automation capability.
 - Cross-Platform Compatibility Assessment
 - Quality Metrics Analysis and Reporting
 - LLM / AI Feature Testing
+- AI-Driven Automated Test Generation
 
 ## Technical skills
 
@@ -38,10 +39,10 @@ TypeScript, JavaScript, Python, Java, SQL, Go
 ### Methodologies
 Agile, Scrum, Shift-Left Testing, Risk-Based Testing, Continuous Testing
 
-### Test frameworks
+### Test frameworks & automation
 Playwright, Nightwatch (Selenium WebDriver), Cucumber (Gherkin), Jest,
 PyTest, Storybook, API Proctor (in-house API test framework), Postman,
-Swagger, axe-core
+Swagger, axe-core, React.js
 
 ### Frontend
 React.js, Astro
@@ -96,13 +97,8 @@ Pittsburgh, Pennsylvania
   strategy across distributed microservice architecture, including manual and
   automated full-stack testing (Playwright and API Proctor, an in-house API
   test framework), API contract and schema validation, CI / CD pipeline
-  maintenance, and performance / load testing on the registration API using
-  k6.
-- Partnered with the security team to test security-focused PRs and identify
-  vulnerabilities, applying OWASP Top 10 principles when testing features
-  exposed to a possible attack surface, surfacing and helping resolve
-  multiple security defects.
-- Wrote hundreds of Playwright tests, building coverage from scratch for 7+
+  maintenance, and performance / load testing.
+- Wrote over 300 Playwright tests, building coverage from scratch for 7+
   major features and integrations with fixtures and page object models, plus
   visual regression for critical flows.
 - Used Storybook regularly for component-level QA, authoring stories and
@@ -117,7 +113,7 @@ Pittsburgh, Pennsylvania
 - Conducted accessibility / WCAG testing (ARIA attributes, color contrast,
   alt text) to ensure compliant, inclusive user experiences on over 300
   different accessibility improvements.
-- Shipped 26+ production frontend feature branches and bugfixes in React /
+- Shipped 26 production frontend feature branches and bugfixes in React /
   TypeScript with Jest unit coverage, bridging engineering and test
   ownership.
 - Tested mobile apps across iOS and Android using Appium, Maestro, and
@@ -145,13 +141,15 @@ Saint Paul, Minnesota
 QA Intern, 2016. Tested features on mobile and tablet apps. Identified and
 reported bugs. Tested and researched VR technology.
 
-### jordonkloiber.com
-Personal project, 2026
+## Projects
 
-Designed and built a personal portfolio site from scratch with Astro,
-including an automated accessibility test suite (Playwright + axe-core) that
-runs in CI on every pull request and gates deploys, shipped via GitHub
-Actions to GitHub Pages.
+### test-run-api
+Go, PostgreSQL
+
+Building a REST API from scratch that ingests CI test-run results and tracks
+flakiness over time, including schema design, input validation, and test
+coverage. Ongoing personal project;
+[github.com/jordonKloiber/test-run-api](https://github.com/jordonKloiber/test-run-api).
 
 ## Education
 
