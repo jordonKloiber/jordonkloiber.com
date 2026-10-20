@@ -15,7 +15,11 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  reporter: 'list',
+  // The JSON reporter only runs in CI — it feeds scripts/report-to-tracker.js,
+  // which posts results to test-run-api. Not useful locally.
+  reporter: process.env.CI
+    ? [['list'], ['json', { outputFile: 'playwright-report/results.json' }]]
+    : 'list',
   use: {
     baseURL: 'http://localhost:4323',
     trace: 'on-first-retry',

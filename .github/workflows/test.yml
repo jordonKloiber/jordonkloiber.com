@@ -31,3 +31,13 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+
+      # Reports to test-run-api regardless of pass/fail — a flaky-test
+      # tracker needs failures recorded too, not just clean runs. Never
+      # fails the job itself (see the script); a tracker outage shouldn't
+      # block CI.
+      - name: Report results to test-run-api
+        if: always()
+        env:
+          TEST_RUN_API_KEY: ${{ secrets.TEST_RUN_API_KEY }}
+        run: node scripts/report-to-tracker.js
