@@ -74,3 +74,26 @@ try {
 } catch (err) {
   console.log(`Failed to reach test-run-api: ${err.message}`);
 }
+
+// Flaky check runs independently of the post above-- a failure here
+// shouldn't be read as the report itself failing.
+try {
+  const res = await fetch(`${API_URL}/flaky?source=${encodeURIComponent(SOURCE)}&n=10`);
+
+  if (!res.ok) {
+    console.log(`test-run-api flaky check responded ${res.status}: ${await res.text()}`);
+  } else {
+    const flaky = (await res.json()).filter((t) => t.is_flaky);
+
+    if (flaky.length === 0) {
+      console.log('No flaky tests over the last 10 runs.');
+    } else {
+      console.log(`${flaky.length} flaky test(s) over the last 10 runs:`);
+      for (const t of flaky) {
+        console.log(`  ${t.test_name} — pass rate ${(t.pass_rate * 100).toFixed(0)}% (${t.runs_considered} runs)`);
+      }
+    }
+  }
+} catch (err) {
+  console.log(`Failed to check flaky status: ${err.message}`);
+}
